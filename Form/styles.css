@@ -308,24 +308,8 @@ h2 {
     transform: translateY(-1px);
 }
 
-.submit-button:hover::after {
-    transform: translateY(-1px);
-}
-
 .submit-button:active {
     transform: translateY(0);
-}
-
-.submit-button::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 74%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    border-radius: 25%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 682px) {
