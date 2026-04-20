@@ -69,6 +69,7 @@ input {
     transform: translate(var(--x), -50%);
     background: linear-gradient(90deg, var(--on) 50%, var(--off) 0);
     border-radius: 50%;
+    overflow: hidden;
     box-shadow: 0 22px 32px -13px rgba(0, 0, 0, 0.55);
     transition: transform var(--time) ease-in-out, box-shadow var(--time) ease-in-out;
 }
@@ -82,8 +83,8 @@ input {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(32px 24px at 50% 35%, #fff6 15%, #fff0),
-                radial-gradient(24px 40px at 75% 40%, #fff6 15%, #fff0),
+    background: radial-gradient(25px 24px at 50% 35%, #fff6 15%, #fff0),
+                radial-gradient(21px 36px at 80% 42%, #fff6 15%, #fff0),
                 radial-gradient(100% 100% at 50% 33%, #0000 25%, #0003 50%);
     box-shadow: 0 0 5px 2px #0003 inset;
     border-radius: 50%;
@@ -92,14 +93,17 @@ input {
 .knob-core,
 .knob-shine {
     z-index: 2;
-    width: 52%;
+    top: 0;
+    width: 53%;
     height: 100%;
+    backface-visibility: hidden;
+    will-change: transform;
     transition: transform calc(var(--time) / 2);
 }
 
 .knob-core {
     position: absolute;
-    right: 49%;
+    right: 48.5%;
     background: var(--off);
     border-radius: 100% 0 0 100% / 50% 50% 50% 50%;
     transform-origin: 100% 50%;
@@ -109,7 +113,7 @@ input {
 
 .knob-shine {
     position: absolute;
-    left: 49%;
+    left: 48.5%;
     background: var(--on);
     border-radius: 0 100% 100% 0 / 50% 50% 50% 50%;
     transform: scaleX(0);
