@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Pineapplepen — Скоро открытие</title>
-
+  <link rel="preload" as="image" href="bg.jpg" fetchpriority="high">
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+  <link rel="preload"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        as="style">
   <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        media="print"
+        onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  </noscript>
 
   <style>
     body {
