@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кнопки</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 40px;
+        }
+
+        .grid {
+            display: flex;
+            gap: 21px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* top links */
+        /* 1 */
+        .btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            height: 100%;
+            max-height: 40px;
+            padding: 8px 16px 10px;
+            background: #EBEBEB;
+            color: #111;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 1;
+            border: 1px solid #AFAFAF;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s, border 0.3s;
+        }
+
+        .btn:hover:not(:disabled),
+        .btn.hover {
+            background: #F4F4F4;
+        }
+
+        .btn:active:not(:disabled),
+        .btn.active,
+        .btn.active:hover {
+            background: #E1E1E1;
+            color: #4C4C4C;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        /* 2 */
+        .btn--danger-border {
+            border: 3px solid #DC241F;
+        }
+
+        .btn--danger-border:active:not(:disabled),
+        .btn--danger-border.active,
+        .btn--danger-border.active:hover {
+            background: #CECECE;
+        }
+
+        /* 3 */
+        .btn--danger-bg {
+            background: #CA130C;
+            color: #fff;
+            border: none;
+        }
+
+        .btn--danger-bg:hover:not(:disabled),
+        .btn--danger-bg.hover {
+            background: #E83029;
+        }
+
+        .btn--danger-bg:active:not(:disabled),
+        .btn--danger-bg.active,
+        .btn--danger-bg.active:hover {
+            background: #A9120C;
+            color: #EDC2C2;
+        }
+
+        /* 4 */
+        .btn--arrow {
+            padding: 8px 24px 10px 16px;
+        }
+
+        .btn--arrow::after {
+            content: "⏵";
+            position: absolute;
+            right: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #DC241F;
+            font-size: 16px;
+        }
+
+        .btn--arrow:active:not(:disabled)::after {
+            color: #A95E5C;
+        }
+
+        /* 5 */
+        .btn--success-bg {
+            background: #6E9735;
+            color: #fff;
+        }
+
+        .btn--success-bg:hover:not(:disabled),
+        .btn--success-bg.hover {
+            background: #85B444;
+        }
+
+        .btn--success-bg:active:not(:disabled),
+        .btn--success-bg.active,
+        .btn--success-bg.active:hover {
+            background: #5E822B;
+            color: #D3E4BD;
+        }
+
+        /* 6 */
+        .btn--success-border {
+            border: 3px solid #6E9735;
+        }
+
+        .btn--success-border:active:not(:disabled) {
+            border-color: #6E9735;
+        }
+
+        /* bottom links */
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn img {
+            margin-right: 7px;
+        }
+
+        .btns .btn {
+            padding: 10px 16px 12px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="grid">
+        <div class="col">
+            <button type="button" class="btn">Просмотреть</button>
+            <button type="button" class="btn hover">Просмотреть</button>
+            <button type="button" class="btn active">Просмотреть</button>
+            <button type="button" class="btn" disabled>Просмотреть</button>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn--danger-border">Просмотреть</button>
+            <button type="button" class="btn btn--danger-border hover">Просмотреть</button>
+            <button type="button" class="btn btn--danger-border active">Просмотреть</button>
+            <button type="button" class="btn btn--danger-border" disabled>Просмотреть</button>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn--danger-bg">Просмотреть</button>
+            <button type="button" class="btn btn--danger-bg hover">Просмотреть</button>
+            <button type="button" class="btn btn--danger-bg active">Просмотреть</button>
+            <button type="button" class="btn btn--danger-bg" disabled>Просмотреть</button>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn--arrow">Просмотреть</button>
+            <button type="button" class="btn btn--arrow hover">Просмотреть</button>
+            <button type="button" class="btn btn--arrow active">Просмотреть</button>
+            <button type="button" class="btn btn--arrow" disabled>Просмотреть</button>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn--success-bg">Просмотреть</button>
+            <button type="button" class="btn btn--success-bg hover">Просмотреть</button>
+            <button type="button" class="btn btn--success-bg active">Просмотреть</button>
+            <button type="button" class="btn btn--success-bg" disabled>Просмотреть</button>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn--success-border">Просмотреть</button>
+            <button type="button" class="btn btn--success-border hover">Просмотреть</button>
+            <button type="button" class="btn btn--success-border active">Просмотреть</button>
+            <button type="button" class="btn btn--success-border" disabled>Просмотреть</button>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button type="button" class="btn">
+            <img src="img/edit.svg" alt="Редактировать">
+            Редактировать
+        </button>
+        <button type="button" class="btn">
+            <img src="img/load.svg" alt="Выгрузить в Excel">
+            Выгрузить в Excel
+        </button>
+        <button type="button" class="btn">
+            <img src="img/delete.svg" alt="Удалить список">
+            Удалить список
+        </button>
+        <button type="button" class="btn">
+            <img src="img/print.svg" alt="Распечатать">
+            Распечатать
+        </button>
+        <button type="button" class="btn">
+            <img src="img/upload.svg" alt="Загрузить из файла">
+            Загрузить из файла
+        </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <main>
+        <div class="page-header">
+            <h1>Заполните поля</h1>
+            <span>Ну, пожалуйста</span>
+        </div>
+
+        <form class="main-form" id="moodForm">
+            <div class="primary-section">
+                <h2>Основное</h2>
+
+                <div class="input-group">
+                    <label for="userName">Имя</label>
+                    <input id="userName" type="text" placeholder="По паспорту" required maxlength="25"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="userColor">Цвет вашего настроения</label>
+                    <input id="userColor" class="color-input" type="color" value="#0000ff"/>
+                </div>
+            </div>
+
+            <div class="secondary-block">
+                <h2>Дополнительное</h2>
+
+                <div class="input-group input-group--top">
+                    <label for="userComment">Комментарий</label>
+                    <textarea id="userComment" placeholder="Напишите хоть что-нибудь, если хотите, конечно" maxlength="300"></textarea>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <label class="control-item">
+                    <input id="userRadio" type="radio" name="options"/>
+                    <span>Ну, а тут просто полежит радиобатон</span>
+                </label>
+
+                <label class="control-item">
+                    <input id="userCheck" type="checkbox" checked/>
+                    <span>Соглашаюсь на всё, что бы вы не придумали, и осознаю, что это может означать
+                        <a href="#">что угодно</a>
+                    </span>
+                </label>
+
+                <button class="submit-button" type="submit">Отправить все мои данные</button>
+            </div>
+            <div class="form-shadow"></div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

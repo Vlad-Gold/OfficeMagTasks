@@ -1,0 +1,57 @@
+.diagramContainer {
+  position: relative;
+  width: 1000px; 
+  height: 1000px;
+  margin: 40px;
+}
+
+.title {
+  position: absolute;
+  left: 40px;
+  top: -35px;
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.svgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#arrow {
+  fill: #aaa;
+}
+
+.line {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1px;
+}
+
+.lineWithArrow {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1px;
+  marker-end: url(#arrow);
+}
+
+.node {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  padding: 10px 17px;
+  border-radius: 0px;
+  text-align: center;
+  white-space: pre-line;
+  cursor: default;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}

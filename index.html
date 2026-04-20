@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог проектов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .project-header .project-type {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-description {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🚀 Тестовые задания ОфисМаг</h1>
+            <p>Демнострация с исходным кодом на GitHub</p>
+        </header>
+
+        <main class="projects-grid">
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>✅ Animated Checkbox</h2>
+                    <div class="project-type">Интерактивные элементы</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Анимированный чекбокс с плавными переходами и современным дизайном. 
+                        Демонстрирует создание кастомных элементов форм с CSS-анимациями.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">файла</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">HTML/CSS</div>
+                            <div class="stat-label">технологии</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/checkBox/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/checkBox" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>🎯 Nice Buttons</h2>
+                    <div class="project-type">Интерактивные элементы</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Стильные кнопки с градиентами и эффектами при наведении. 
+                        Использует современные CSS-техники для создания привлекательного интерфейса.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">файла</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">CSS</div>
+                            <div class="stat-label">технология</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/niceBtns/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/niceBtns" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>📝 Form</h2>
+                    <div class="project-type">Формы и валидация</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Современная форма с валидацией и красивым дизайном. 
+                        Включает различные типы полей и пользовательские сценарии.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">файла</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">HTML/CSS/JS</div>
+                            <div class="stat-label">технологии</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/Form/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/Form" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>⚠️ Page with errors</h2>
+                    <div class="project-type">Страницы ошибок</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Красивые страницы ошибок 404, 500 и другие. 
+                        Помогает пользователям ориентироваться при возникновении проблем.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">файла</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">HTML/CSS</div>
+                            <div class="stat-label">технологии</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/Page-with-errors/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/Page-with-errors" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>🎠 Slider</h2>
+                    <div class="project-type">Интерактивные компоненты</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Многофункциональный слайдер с различными режимами отображения. 
+                        Поддерживает автопрокрутку, навигацию и адаптивный дизайн.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">файлов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">JavaScript</div>
+                            <div class="stat-label">основная технология</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/Slider/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/Slider" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>📄 Text</h2>
+                    <div class="project-type">Типографика</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Эксперименты с типографикой и текстовыми эффектами. 
+                        Демонстрация различных стилей оформления текста.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">файла</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">CSS</div>
+                            <div class="stat-label">технология</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/Text/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/Text" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>📊 Mason Diagram</h2>
+                    <div class="project-type">Визуализация данных</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Интерактивные диаграммы и визуализации данных. 
+                        Использует современные библиотеки для отображения информации.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">файлов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">D3.js</div>
+                            <div class="stat-label">технология</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/mason-diagram/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/mason-diagram" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>🔘 Universal Button</h2>
+                    <div class="project-type">Компоненты UI</div>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Универсальный компонент кнопки с множеством настроек. 
+                        Поддерживает различные стили, размеры и состояния.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">файлов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Web Components</div>
+                            <div class="stat-label">технология</div>
+                        </div>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://Vlad-Gold.github.io/OfficeMagTasks/universal-button/" class="btn btn-primary" target="_blank">
+                            🌐 Демо
+                        </a>
+                        <a href="https://github.com/Vlad-Gold/OfficeMagTasks/tree/main/universal-button" class="btn btn-secondary" target="_blank">
+                            📁 Исходник
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>Создано с ❤️ | <a href="https://github.com/Vlad-Gold/OfficeMagTasks" target="_blank">GitHub Repository</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Добавляем небольшую интерактивность
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
